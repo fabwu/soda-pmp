@@ -1,0 +1,129 @@
+\documentclass[11pt,a4paper]{scrreprt}
+
+% Codierung
+\usepackage{selinput}
+\SelectInputMappings{
+  adieresis={ä},
+  germandbls={ß},
+}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Kopf-/Fusszeilen
+\usepackage{scrlayer-scrpage}
+\usepackage{lastpage}
+\setkomafont{pageheadfoot}{\small\sffamily}
+\pagestyle{scrheadings}
+\lohead*{Message-Logger}
+\cohead*{VSK}
+\rohead*{Team 3}
+\lofoot*{Projektmanagementplan}
+\cofoot*{}
+\rofoot*{Seite \thepage \hspace{1pt} von \pageref{LastPage}}
+
+\usepackage{lipsum}
+
+% Bilder
+\usepackage{graphicx}
+
+% Hyperlinks
+\usepackage[hidelinks]{hyperref}
+
+% Quellcode
+\usepackage{listings}
+\lstset{language=Java}
+\lstloadlanguages{Java}								% language options
+\lstset{
+	basicstyle=\ttfamily\footnotesize,      		% fontstyle
+	numbers=left,									% linenumber placement
+	numberstyle=\tiny,								% linenumber fontsize
+	numbersep=5pt,									% how far the line-numbers are from the code
+	breaklines=true,								% print linebreaks
+	backgroundcolor=\color{gray!10},				% background color
+	commentstyle=\color{commentcolor},				% comment color
+	morecomment=[s][\color{javadoccolor}]{/**}{*/}, % javadoc color
+	keywordstyle=\color{keywordcolor},				% keyword color
+	stringstyle=\color{stringcolor},				% string color
+	showstringspaces=false,							% show spaces in a string
+	frame=single,									% frame
+	tabsize=4,										% tabstop
+	rulecolor=\color{black},						% if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here)) 
+	title=\lstname,									% title is name of source file
+	escapeinside={\%*}{*)},			 				% if you want to add LaTeX within your code
+	inputencoding=utf8,								% encoding = utf8
+	extendedchars=true,								% utf8 support 
+	literate=										% utf8 support
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1
+}
+
+\begin{document}
+\titlehead{Hochschule Luzern \\ 
+	Technik \& Architektur}
+\subject{Projektmanagementplan}
+\title{Message-Logger}
+\subtitle{Team 3}
+\author{Fabian Wüthrich \\ 
+	Simon Erni \\ 
+	Stefan Winterberger \\ 
+	Alain Studhalter}
+\date{\today}
+\publishers{Verteilte Systeme \& Komponenten}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Projektorganisation}
+
+\section{Organisationsplan, Rollen \& Zuständigkeiten}
+
+\section{Projektstrukturplan}
+
+\chapter{Projektführung}
+
+\section{Rahmenplan}
+
+\section{Projektkontrolle}
+
+\section{Risikomanagement}
+
+\section{Projektabschluss}
+
+\chapter{Projektunterstützung}
+
+\section{Tools für Entwicklung, Test und Abnahme}
+
+\section{Konfigurationsmanagement}
+
+\section{Reviewplanung}
+
+\section{Abnahmeplanung}
+
+\chapter{Testplan}
+
+\section{Testdesign \& Abläufe}
+
+\section{Testfälle}
+
+\appendix
+
+\chapter{Anhang}
+
+\section{Sprintpläne}
+
+\section{Meilensteinberichte}
+
+\section{Reviewprotokolle}
+
+\end{document}
